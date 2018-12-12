@@ -4,27 +4,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp80
+namespace ConsoleApp100
 {
-    public class User
+    public class GenericClass<T>
     {
-        public string name = "shiva";
-        public string location = " gouda";
-        public void GetUserDetails()
+        public T msg;
+        public void genericMethod(T name,T location)
         {
-            Console.WriteLine("name:{0}", name);
-            Console.WriteLine("location:{0}", location);
+            Console.WriteLine("{0}", msg);
+            Console.WriteLine("{0}", name);
+            Console.WriteLine("{ 0}", location);
         }
     }
-
-
 
     class Program
     {
         static void Main(string[] args)
         {
-            User u = new User();
-            u.GetUserDetails();
+            GenericClass<string> gclass = new GenericClass<string>();
+            gclass.msg = "welcome to generics";
+            gclass.genericMethod("Suresh","Hadagali");
+            Console.ReadLine();
         }
     }
 }
