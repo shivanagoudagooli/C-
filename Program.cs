@@ -4,19 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp3
+namespace ConsoleApp36
 {
     class Program
     {
         static void Main(string[] args)
         {
-            string name = "shiva";
-            int age = 20;
-            Console.WriteLine("user name is" +" " + name + "  " +"user age is" + age);
-          
-            Console.ReadKey();
-
-            // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
+            List<string> names = new List<string>() { "shiva", "loki" };
+            foreach(string name in names)
+            {
+                Console.WriteLine("name");
+            }
         }
     }
 }
