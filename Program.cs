@@ -4,18 +4,43 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp47
+namespace ConsoleApp67
 {
+    interface IUser
+    {
+        void GetDetails(string x);
+    }
+
+    class User:IUser
+    {
+        public void GetDetails(string a)
+        {
+            Console.WriteLine("Name:{0}", a);
+        }
+    }
+
+     class User1:IUser
+    {
+        public void GetDetails(string a)
+        {
+            Console.WriteLine("location:{0}", a);
+        }
+
+    }
+
     class Program
     {
         static void Main(string[] args)
         {
-            // The code provided will print ‘Hello World’ to the console.
-            // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
-            Console.WriteLine("Hello World!");
-            Console.ReadKey();
+            IUser u = new User();
+            u.GetDetails("shiva");
 
-            // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
+            User1 u1 = new User1();
+            u1.GetDetails("hadagali");
+            Console.ReadLine();
+
         }
     }
+
+    
 }
